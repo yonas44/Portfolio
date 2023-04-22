@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.8s ease-in-out;
+}
+
+.right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0);
+}
