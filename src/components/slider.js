@@ -25,7 +25,7 @@ function Slider() {
   const projectPictures = [booking, budget, weather, movie];
 
   return (
-    <div className="relat">
+    <div className="relative h-[500px] lg:h-screen lg:w-screen lg:-left-40 mt-10">
       {projects.map((project, index) => (
         <SingleProject
           key={uuidv4()}
@@ -38,11 +38,11 @@ function Slider() {
           liveDemo={project.links[1]}
         />
       ))}
-      <div className="slider-bullets mt-10 flex gap-2 justify-center">
+      <div className="slider-bullets mt-10 flex justify-center absolute z-10 left-[15%] bottom-[8%]">
         {projects.map((project, index) => (
           <span
-            className={`w-[10px] inline-block bg-gray-400 border rounded-full ${
-              index === currentSlide ? 'bg-gray-800' : ''
+            className={`w-[6px] h-[6px] bg-gray-400 duration-300 ${
+              index === currentSlide ? 'bg-white scale-150' : ''
             }`}
             key={index}
             onClick={() => handleBulletClick(index)}

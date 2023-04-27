@@ -19,18 +19,39 @@ body {
 }
 
 .left {
-  transform: translateX(-100%);
+  transform: translateX(-10%);
   opacity: 0;
-  transition: transform 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .right {
   opacity: 0;
-  transform: translateX(100%);
-  transition: transform 0.8s ease-in-out;
+  transform: translateX(10%);
+  transition: all 0.8s ease-in-out;
 }
 
-.slide-in.active {
+.active {
   opacity: 1;
   transform: translateX(0);
+}
+
+.slider {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slider-bullets {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slider-bullets span {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
 }

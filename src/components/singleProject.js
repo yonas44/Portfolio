@@ -1,49 +1,100 @@
-import { GrDeploy } from 'react-icons/gr';
 import { AiFillGithub } from 'react-icons/ai';
 import Image from 'next/image';
-import { AiFillCloseCircle } from 'react-icons/ai';
-import { useEffect } from 'react';
+import { RiLiveLine } from 'react-icons/ri';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 const SingleProject = (props) => {
-  const { image, description, sourceCode, liveDemo, count, setShow } = props;
+  const {
+    image,
+    title,
+    description,
+    sourceCode,
+    liveDemo,
+    index,
+    currentSlide,
+  } = props;
+  const projDesc = useRef(null);
+  const projDescHolder = useRef(null);
+
+  // let tween = null;
+
+  useEffect(() => {
+    if (currentSlide === index) {
+      gsap.to(projDescHolder.current, {
+        height: `${projDescHolder.current.children[0].clientHeight + 16}px`,
+        padding: '8px',
+        zIndex: 10,
+        duration: 1,
+      });
+      gsap.to(projDesc.current, { x: 0, duration: 1, opacity: 1, delay: 1 });
+      gsap.fromTo(
+        '.project-btns',
+        { y: '100%', opacity: 0 },
+        {
+          y: 0,
+          duration: 2,
+          ease: 'elastic.out(1, 0.3)',
+          stagger: 0.2,
+          opacity: 1,
+          delay: 1.5,
+        }
+      );
+    }
+  }, []);
 
   return (
-    <div className="project relative basis-1/3 flex-1">
-      <Image
-        src={image}
-        className="rounded-lg object-cover h-full w-full"
-        alt="project-pic"
-      />
-      {/* {show && (
-        <div className="fixed top-0 w-[100vw] h-[100vh] left-0 text-black text-center backdrop-blur-sm bg-gray-300/30 flex flex-col">
-          <AiFillCloseCircle
-            className="block mx-auto my-10 text-5xl"
-            onClick={setShow(!show)}
-          />
-          <p>{description}</p>
-          <div className="flex justify-center mt-10">
+    <>
+      <div
+        className={`w-full h-full absolute top-0 opacity-0 duration-500 flex ${
+          index === currentSlide ? 'opacity-100' : ''
+        }`}
+      >
+        <Image
+          src={image}
+          className="rounded-lg m-auto object-cover h-full w-full"
+          alt="project-pic"
+        />
+      </div>
+      {index === currentSlide && (
+        <div className="absolute top-0 h-full w-full bg-gray-950/70 text-white text-center flex flex-col">
+          <div
+            ref={projDescHolder}
+            className="border-l-8 m-auto w-[75%] overflow-hidden h-0 flex"
+          >
+            <div
+              className="text-left -translate-x-[100px] opacity-0 my-auto"
+              ref={projDesc}
+            >
+              <h4
+                style={{
+                  fontSize: '1.2rem',
+                  marginBottom: '10px',
+                  fontFamily: 'Nova Oval, cursive',
+                }}
+              >
+                {title}
+              </h4>
+              {description}
+            </div>
+          </div>
+          <div className="flex justify-center absolute bottom-20 z-20 w-full">
             <a href={sourceCode}>
-              <button className="bg-cyan-500 text-white px-4 py-2 ml-5 rounded-md flex gap-2 items-center">
+              <button className="project-btns bg-cyan-500 transition-colors duration-300 text-white px-4 py-2 ml-5 rounded-md flex gap-2 items-center hover:bg-white hover:text-cyan-500">
                 <AiFillGithub />
                 Source code
               </button>
             </a>
             <a href={liveDemo}>
-              <button className="bg-cyan-500 text-white px-4 py-2 ml-5 rounded-md flex gap-2 items-center">
-                <GrDeploy />
+              <button className="project-btns bg-cyan-500 text-white px-4 py-2 ml-5 rounded-md flex gap-2 items-center transition-colors duration-300 hover:bg-white hover:text-cyan-500">
+                <RiLiveLine />
                 Live demo
               </button>
             </a>
           </div>
         </div>
-      )} */}
-      <span
-        className="px-6 py-4 rounded-lg text-2xl absolute -bottom-5 -right-5 text-white bg-cyan-500"
-        style={{ fontFamily: 'Nova Oval, cursive' }}
-      >
-        {count}
-      </span>
-    </div>
+      )}
+    </>
   );
 };
 

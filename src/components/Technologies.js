@@ -7,10 +7,28 @@ import { SiRedux, SiCss3, SiRubyonrails, SiJest } from 'react-icons/si';
 import { DiRuby } from 'react-icons/di';
 import { BsGit } from 'react-icons/bs';
 import { AiFillHtml5, AiFillGithub } from 'react-icons/ai';
+import { useEffect, useRef, useState } from 'react';
 
-const Technologies = (props) => {
-  const { scrollPosition, screenSize, divRef, divRef2, divTop, divTop2 } =
-    props;
+const Technologies = () => {
+  const divRef = useRef(null);
+  const divRef2 = useRef(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [divTop, setDivTop] = useState(0);
+  const [divTop2, setDivTop2] = useState(0);
+  const [screenSize, setScreenSize] = useState(null);
+
+  useEffect(() => {
+    setScreenSize(screen.height);
+    const handleScroll = () => setScrollPosition(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setDivTop(divRef.current.offsetTop);
+    setDivTop2(divRef2.current.offsetTop);
+  }, []);
+
   return (
     <>
       <h3 className="text-2xl lg:text-3xl lg:mb-20 dark:text-white">
