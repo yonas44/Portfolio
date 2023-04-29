@@ -6,6 +6,7 @@ import budget from '../assets/budget.png';
 import weather from '../assets/weather.png';
 import movie from '../assets/moviex.png';
 import { v4 as uuidv4 } from 'uuid';
+import { BsChevronCompactRight } from 'react-icons/bs';
 
 function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,7 +26,7 @@ function Slider() {
   const projectPictures = [booking, budget, weather, movie];
 
   return (
-    <div className="relative h-[500px] lg:h-screen lg:w-screen lg:-left-40 mt-10">
+    <div className="relative h-[500px] lg:h-screen lg:w-screen lg:-left-40 mt-10 lg:m-0">
       {projects.map((project, index) => (
         <SingleProject
           key={uuidv4()}
@@ -38,7 +39,11 @@ function Slider() {
           liveDemo={project.links[1]}
         />
       ))}
-      <div className="slider-bullets mt-10 flex justify-center absolute z-10 left-[15%] bottom-[8%]">
+      <BsChevronCompactRight
+        className="text-gray-500/50 absolute z-20 right-0 h-full w-[20%] cursor-pointer hover:text-gray-200"
+        onClick={() => handleBulletClick((currentSlide + 1) % projects.length)}
+      />
+      <div className="slider-bullets mt-10 flex gap-2 justify-center absolute z-10 left-[15%] bottom-[8%]">
         {projects.map((project, index) => (
           <span
             className={`w-[6px] h-[6px] bg-gray-400 duration-300 ${

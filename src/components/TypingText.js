@@ -22,7 +22,10 @@ const TypingText = ({ text }) => {
   }, [text, displayText, currentIndex]);
 
   return (
-    <span className="text-gray italic h-[30px] max-w-lg text-wrap lg:text-lg dark:text-gray-400">
+    <span
+      className="text-gray italic h-[30px] max-w-lg text-wrap lg:text-lg dark:text-gray-400"
+      style={{ fontFamily: 'Caveat, cursive' }}
+    >
       {displayText}
     </span>
   );
