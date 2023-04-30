@@ -31,7 +31,7 @@ const Technologies = () => {
 
   return (
     <>
-      <h3 className="text-2xl text-center lg:text-3xl lg:mb-20 dark:text-white">
+      <h3 className="text-3xl text-center lg:text-3xl lg:mb-20 dark:text-white">
         Technology/ tools
       </h3>
       <div className="lg:flex gap-10">

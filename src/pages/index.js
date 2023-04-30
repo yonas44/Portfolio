@@ -18,8 +18,8 @@ export default function Home() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <main className="bg-white overflow-hidden min-h-screen px-5 py-10 md:px-20 lg:px-40 dark:bg-gray-800 scroll-smooth">
-        <section className="relative min-h-screen flex flex-col bg-fixed">
+      <main className="bg-white min-h-screen overflow-y-auto overflow-x-hidden px-5 py-10 md:px-20 lg:px-40 dark:bg-gray-800">
+        <section className="relative min-h-screen flex flex-col">
           <nav className="pb-10 flex justify-between">
             <h1
               className="text-2xl dark:text-white"
@@ -36,8 +36,9 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://drive.google.com/uc?export=download&id=1VDb4uFYU6PAakJtPwCxDkqVKckmv-5mP"
                   className="bg-cyan-500 text-white px-4 py-2 ml-5 rounded-md"
+                  download="Resume.pdf"
                 >
                   Resume
                 </a>
@@ -45,7 +46,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className="lg:flex flex-1">
-            <aside className="home-left relative -translate-x-3 opacity-0 text-center lg:text-left lg:w-1/2 flex flex-col gap-6 justify-center">
+            <aside className="home-left relative -translate-x-5 opacity-0 text-center lg:text-left lg:w-1/2 flex flex-col gap-6 justify-center">
               <div className="p-10 lg:p-0">
                 <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl lg:text-7xl">
                   Yonas Tesfu
@@ -75,7 +76,7 @@ export default function Home() {
               </div>
             </aside>
             <aside className="lg:w-1/2">
-              <div className="flex flex-col mt-12 gap-10 items-center text-center w-full">
+              <div className="flex flex-col lg:mt-12 gap-10 items-center text-center w-full">
                 <div className="bg-gradient-to-b from-teal-300 rounded-full mt-20 mx-auto overflow-hidden w-80 h-80 pt-5 lg:w-200 lg:h-100">
                   <Image src={Yonas} alt="profile-pic" />
                 </div>
@@ -86,7 +87,7 @@ export default function Home() {
               </div>
             </aside>
           </div>
-          <div className="absolute bottom-12 flex justify-center w-full">
+          <div className="hidden absolute bottom-12 lg:flex justify-center w-full">
             <BsChevronCompactDown
               className="h-[80px] w-[80px] text-gray-400 hover:text-cyan-500 duration-300 cursor-pointer"
               onClick={() =>
@@ -97,18 +98,18 @@ export default function Home() {
         </section>
         <section
           ref={techSection}
-          className="min-h-screen snap-start flex flex-col justify-center"
+          className="min-h-screen mt-40 lg:m-0 flex flex-col justify-center"
         >
           <Technologies />
         </section>
-        <section className="relative flex flex-col text-center snap-center">
+        <section className="relative flex flex-col text-center bg-fixed">
           <h3 className="text-2xl lg:absolute lg:top-10 -lg:left-10 lg:text-4xl lg:text-white dark:text-white text-left z-30">
             Portfolio
           </h3>
           <Slider />
         </section>
-        <section className="bg-gray-100 p-8 min-h-screen">
-          <h2 class="text-2xl mb-4 font-semibold">Let's connect!</h2>
+        <section className="bg-gray-100 p-8 min-h-screen bg-fixed">
+          <h2 className="text-2xl mb-4 font-semibold">Let's connect!</h2>
         </section>
       </main>
     </div>
