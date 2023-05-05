@@ -4,7 +4,7 @@ export const featuredProjects = [
     description:
       ' This app streamlines travel booking with registration and login features, allowing users to book pre-set packages or create their own. Users can reserve their dream vacation with a few clicks without the hassle of searching through multiple travel sites.',
     stack: ['React.js', 'Redux', 'Ruby on Rails', 'JWT', 'PostgreSQL'],
-    link: ['https://www.greenproffs.com/'],
+    link: ['https://github.com/yonas44/travelers_hub_back-end'],
   },
   {
     title: 'Weather app',

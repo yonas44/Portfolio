@@ -23,6 +23,7 @@ import moviex2 from './assets/moviex2.png';
 import TypingText from './components/typingText';
 import budget from './assets/budget.png';
 import budget2 from './assets/budget2.png';
+import Contact from './components/contact';
 
 function App() {
   const [text, setText] = useState(0);
@@ -65,7 +66,7 @@ function App() {
   return (
     <main className="flex min-h-screen flex-col m-auto w-5/6 lg:w-4/6 gap-6 items-center justify-between scroll-smooth">
       <header className="fixed z-20 w-full px-5">
-        <nav className="relative flex flex-col lg:flex-row items-center gap-[50px] px-10 py-3 mx-auto justify-end bg-gradient-to-b from-gray-900 backdrop:blur-md">
+        <nav className="relative flex flex-col backdrop-blur-sm lg:backdrop-blur-none lg:flex-row items-center gap-[50px] px-10 py-3 mx-auto justify-end bg-gradient-to-b from-gray-900">
           <span
             onClick={() => handleSectionScroll('home')}
             className="absolute left-3 top-3 text-lg font-pro cursor-pointer"
@@ -124,10 +125,18 @@ function App() {
       <div className="fixed bottom-0 hidden w-screen lg:flex">
         <div className="mt-auto w-full px-2 justify-between right-0 bottom-0 lg:flex">
           <aside className="flex items-center gap-6 rotate-90">
-            <a href="https://github.com/yonas44/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/yonas44/"
+            >
               <AiFillGithub className="-rotate-90 text-2xl duration-100 cursor-pointer hover:text-orange-500 hover:scale-125" />
             </a>
-            <a href="https://www.linkedin.com/in/yonas-tesfu/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/yonas-tesfu/"
+            >
               <AiFillLinkedin className="-rotate-90 text-2xl hover:text-orange-500 duration-100 hover:scale-125" />
             </a>
             <hr className="border-none h-[1px] w-[100px] bg-gray-200" />
@@ -218,12 +227,16 @@ function App() {
               </div>
             </ul>
           </div>
-          <div className="mx-auto mt-10 w-[300px] h-[300px] flex justify-center rounded-full overflow-hidden bg-gradient-to-t from-orange-200">
-            <img
-              className="object-cover mt-auto ml-4"
-              src={Yonas}
-              alt="profile-pic"
-            />
+          <div className="relative mx-auto mt-10 w-[300px] h-[300px] flex justify-center">
+            <div className="w-full h-full border absolute left-3 top-3 border-orange-500" />
+            <div className="relative z-10 overflow-hidden duration-200 hover:-translate-x-2 hover:-translate-y-1 bg-orange-300">
+              <div className="w-full h-full absolute top-0 z-20 duration-200 lg:bg-orange-500/50 hover:bg-transparent" />
+              <img
+                className="h-full relative mt-auto"
+                src={Yonas}
+                alt="profile-pic"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -265,45 +278,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className=" mt-20 w-full flex flex-col gap-5" id="contact">
-        <div className="flex w-full gap-2 items-center">
-          <MdOutlineEmojiPeople className="text-3xl text-orange-400" />
-          <h3 className="text-3xl">Let's connect</h3>
-          <hr className="bg-gray-500 flex-1 h-[1px] border-none" />
-        </div>
-
-        <div className="flex flex-col gap-5 my-20">
-          <h2 className="text-center text-3xl text-orange-200">
-            Get in touch!
-          </h2>
-          <p className="text-gray-300 text-center">
-            I'm always interested in hearing about new projects, so if you'd
-            like to chat please get in touch.
-          </p>
-          <p
-            className="text-center text-gray-500 text-2xl lg:text-3xl"
-            style={{ fontFamily: 'Caveat, cursive' }}
-          >
-            "The best dreams happen when we are awake!"
-          </p>
-          <a href="mailto:henoktesfu48@gmail.com">
-            <button
-              type="button"
-              className="relative mt-5 px-4 py-2 border border-orange-400 block mx-auto text-orange-200 hover:-translate-x-2 hover:-translate-y-1 duration-300 hover:shadow-btnShadow w-max"
-            >
-              <p>Say Hello</p>
-            </button>
-          </a>
-          <div className="flex gap-10 text-3xl my-10 mx-auto">
-            <a href="https://github.com/yonas44/">
-              <AiFillGithub className="text-2xl duration-100 cursor-pointer hover:text-orange-500 hover:scale-125" />
-            </a>
-            <a href="https://www.linkedin.com/in/yonas-tesfu/">
-              <AiFillLinkedin className="text-2xl hover:text-orange-500 duration-100 hover:scale-125" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <Contact />
     </main>
   );
 }

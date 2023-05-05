@@ -103,11 +103,15 @@ const Project = (props) => {
               index % 2 === 0 ? 'justify-end' : ''
             } mt-10`}
           >
-            <a href="">
+            <a target="_blank" rel="noopener noreferrer" href={project.link[0]}>
               <FaGithub className="hover:text-orange-400 cursor-pointer" />
             </a>
             {project.link.length > 1 && (
-              <a href="">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={project.link[1]}
+              >
                 <MdOutlineOpenInNew className="hover:text-orange-400 cursor-pointer" />
               </a>
             )}
