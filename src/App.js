@@ -227,16 +227,12 @@ function App() {
               </div>
             </ul>
           </div>
-          <div className="relative mx-auto mt-10 w-[300px] h-[300px] flex justify-center">
-            <div className="w-full h-full border absolute left-3 top-3 border-orange-500" />
-            <div className="relative z-10 overflow-hidden duration-200 hover:-translate-x-2 hover:-translate-y-1 bg-orange-300">
-              <div className="w-full h-full absolute top-0 z-20 duration-200 lg:bg-orange-500/50 hover:bg-transparent" />
-              <img
-                className="h-full relative mt-auto"
-                src={Yonas}
-                alt="profile-pic"
-              />
-            </div>
+          <div className="mx-auto mt-10 w-[300px] h-[300px] flex justify-center rounded-full overflow-hidden bg-gradient-to-t from-orange-200">
+            <img
+              className="object-cover mt-auto ml-4"
+              src={Yonas}
+              alt="profile-pic"
+            />
           </div>
         </div>
       </section>
