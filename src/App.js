@@ -11,18 +11,18 @@ import {
   AiFillLinkedin,
   AiOutlineFundProjectionScreen,
 } from 'react-icons/ai';
-import booking from './assets/booking.png';
-import booking2 from './assets/booking2.png';
-import booking3 from './assets/booking3.png';
-import booking4 from './assets/booking4.png';
-import weather from './assets/weather.png';
-import weather2 from './assets/weather2.png';
-import weather3 from './assets/weather3.png';
-import moviex from './assets/moviex1.png';
-import moviex2 from './assets/moviex2.png';
+import booking from './assets/booking.webp';
+import booking2 from './assets/booking2.webp';
+import booking3 from './assets/booking3.webp';
+import booking4 from './assets/booking4.webp';
+import weather from './assets/weather.webp';
+import weather2 from './assets/weather2.webp';
+import weather3 from './assets/weather3.webp';
+import moviex from './assets/moviex1.avif';
+import moviex2 from './assets/moviex2.avif';
 import TypingText from './components/typingText';
-import budget from './assets/budget.png';
-import budget2 from './assets/budget2.png';
+import budget from './assets/budget.webp';
+import budget2 from './assets/budget2.avif';
 import Contact from './components/contact';
 
 function App() {
@@ -30,9 +30,9 @@ function App() {
   const [show, setShow] = useState(false);
 
   const texts = [
-    'I am a Full-stack Developer.',
-    'I am a Mechatronics Engineer.',
-    'I am a car Enthusiast.',
+    'Full-stack Developer.',
+    'Mechatronics Engineer.',
+    'car Enthusiast.',
   ];
 
   const handleSectionScroll = (id) => {
@@ -91,21 +91,30 @@ function App() {
           >
             <li
               className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200"
-              onClick={() => handleSectionScroll('about')}
+              onClick={() => {
+                handleSectionScroll('about');
+                setShow((state) => !state);
+              }}
             >
               <BsPersonFill className="text-3xl text-orange-400" />
               About Me
             </li>
             <li
               className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200"
-              onClick={() => handleSectionScroll('work')}
+              onClick={() => {
+                handleSectionScroll('work');
+                setShow((state) => !state);
+              }}
             >
               <AiOutlineFundProjectionScreen className="text-3xl text-orange-400" />
               Work
             </li>
             <li
               className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200"
-              onClick={() => handleSectionScroll('contact')}
+              onClick={() => {
+                handleSectionScroll('contact');
+                setShow((state) => !state);
+              }}
             >
               <MdOutlineEmojiPeople className="text-3xl text-orange-400" />
               Contact
@@ -166,7 +175,7 @@ function App() {
             text={texts[text]}
           />
           <p className="intro opacity-0 mt-3 text-gray-400 lg:text-xl lg:w-1/2">
-            I’m a remote web devloper specializing in building exceptional
+            I’m a remote web developer specializing in building exceptional
             digital experiences. Currently, I’m focused on building accessible,
             human-centered products.
           </p>

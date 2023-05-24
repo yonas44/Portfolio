@@ -27,7 +27,7 @@ const TypingText = ({ text, setText, count }) => {
       className="intro text-3xl text-gray my-5 italic h-[30px] text-wrap lg:text-4xl dark:text-gray-400"
       style={{ fontFamily: 'Caveat, cursive' }}
     >
-      {displayText}
+      I am a {displayText}
     </span>
   );
 };
