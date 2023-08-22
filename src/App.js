@@ -1,46 +1,53 @@
-import { BsPersonFill } from 'react-icons/bs';
-import { MdOutlineEmojiPeople, MdExitToApp } from 'react-icons/md';
-import { FaHamburger, FaHandPointRight } from 'react-icons/fa';
-import Yonas from './assets/profile-pic.png';
-import { useEffect, useState } from 'react';
-import { featuredProjects, otherProjects } from './utils/projects';
-import Project from './components/singleProject';
-import { gsap } from 'gsap';
+import { BsPersonFill } from "react-icons/bs";
+import { MdOutlineEmojiPeople, MdExitToApp } from "react-icons/md";
+import { FaHamburger, FaHandPointRight } from "react-icons/fa";
+import Yonas from "./assets/profile-pic.png";
+import { useEffect, useState } from "react";
+import { featuredProjects, otherProjects } from "./utils/projects";
+import Project from "./components/singleProject";
+import { gsap } from "gsap";
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiOutlineFundProjectionScreen,
-} from 'react-icons/ai';
-import booking from './assets/booking.webp';
-import booking2 from './assets/booking2.webp';
-import booking3 from './assets/booking3.webp';
-import booking4 from './assets/booking4.webp';
-import weather from './assets/weather.webp';
-import weather2 from './assets/weather2.webp';
-import weather3 from './assets/weather3.webp';
-import moviex from './assets/moviex1.avif';
-import moviex2 from './assets/moviex2.avif';
-import TypingText from './components/typingText';
-import budget from './assets/budget.webp';
-import budget2 from './assets/budget2.avif';
-import Contact from './components/contact';
+} from "react-icons/ai";
+import booking from "./assets/booking.webp";
+import booking2 from "./assets/booking2.webp";
+import booking3 from "./assets/booking3.webp";
+import booking4 from "./assets/booking4.webp";
+import weather from "./assets/weather.webp";
+import weather2 from "./assets/weather2.webp";
+import weather3 from "./assets/weather3.webp";
+import moviex from "./assets/moviex1.avif";
+import moviex2 from "./assets/moviex2.avif";
+import TypingText from "./components/typingText";
+import budget from "./assets/budget.webp";
+import budget2 from "./assets/budget2.avif";
+import Contact from "./components/contact";
+import figsy1 from "./assets/figsy-mockup1.webp";
+import figsy2 from "./assets/figsy-mockup2.webp";
+import figsy3 from "./assets/figsy-mockup3.webp";
+import figsy4 from "./assets/figsy-mockup4.webp";
+import figsy5 from "./assets/figsy-mockup5.webp";
+import figsy6 from "./assets/figsy-mockup6.webp";
 
 function App() {
   const [text, setText] = useState(0);
   const [show, setShow] = useState(false);
 
   const texts = [
-    'Full-stack Developer.',
-    'Mechatronics Engineer.',
-    'car Enthusiast.',
+    "Full-stack Developer.",
+    "Mechatronics Engineer.",
+    "car Enthusiast.",
   ];
 
   const handleSectionScroll = (id) => {
     const section = document.querySelector(`#${id}`);
-    section.scrollIntoView({ behavior: 'smooth' });
+    section.scrollIntoView({ behavior: "smooth" });
   };
 
   const pics = [
+    [figsy1, figsy2, figsy3, figsy4, figsy5, figsy6],
     [booking, booking2, booking3, booking4],
     [weather, weather2, weather3],
     [budget, budget2],
@@ -49,16 +56,16 @@ function App() {
 
   useEffect(() => {
     gsap.fromTo(
-      '.nav-links',
-      { opacity: 0, y: '-50px' },
+      ".nav-links",
+      { opacity: 0, y: "-50px" },
       { y: 0, opacity: 1, duration: 0.3, stagger: 0.4 }
     );
   }, [show]);
 
   useEffect(() => {
     gsap.fromTo(
-      '.intro',
-      { y: '50px', opacity: 0 },
+      ".intro",
+      { y: "50px", opacity: 0 },
       { y: 0, opacity: 1, duration: 0.5, delay: 1, stagger: 0.3 }
     );
   }, []);
@@ -68,7 +75,7 @@ function App() {
       <header className="fixed z-20 w-full px-5">
         <nav className="relative flex flex-col backdrop-blur-sm lg:backdrop-blur-none lg:flex-row items-center gap-[50px] px-10 py-3 mx-auto justify-end bg-gradient-to-b from-gray-900">
           <span
-            onClick={() => handleSectionScroll('home')}
+            onClick={() => handleSectionScroll("home")}
             className="absolute left-3 top-3 text-lg font-pro cursor-pointer"
           >
             Yonas Tesfu
@@ -86,13 +93,13 @@ function App() {
           )}
           <ul
             className={`lg:flex flex-col trasns lg:flex-row gap-10 font-pro ${
-              show ? 'flex' : 'hidden'
+              show ? "flex" : "hidden"
             }`}
           >
             <li
               className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200"
               onClick={() => {
-                handleSectionScroll('about');
+                handleSectionScroll("about");
                 setShow((state) => !state);
               }}
             >
@@ -102,7 +109,7 @@ function App() {
             <li
               className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200"
               onClick={() => {
-                handleSectionScroll('work');
+                handleSectionScroll("work");
                 setShow((state) => !state);
               }}
             >
@@ -112,7 +119,7 @@ function App() {
             <li
               className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200"
               onClick={() => {
-                handleSectionScroll('contact');
+                handleSectionScroll("contact");
                 setShow((state) => !state);
               }}
             >
@@ -190,7 +197,7 @@ function App() {
         <div className="mt-10 flex flex-col lg:flex-row">
           <div className="flex flex-col gap-4 lg:w-1/2">
             <p className="lg:text-lg">
-              Hello! My name is{' '}
+              Hello! My name is{" "}
               <span className="font-bold text-orange-400">Yonas</span> a
               full-stack developer with a passion for problem-solving,
               collaboration, and mentorship. I value communication, time
@@ -201,7 +208,7 @@ function App() {
               consistently exceed expectations and drive successful outcomes.
             </p>
             <p>
-              Here are some of the{' '}
+              Here are some of the{" "}
               <span className="text-orange-400">technologies</span> I use to
               fight web related problems with:
             </p>
@@ -231,7 +238,7 @@ function App() {
                 </li>
                 <li className="flex gap-1 items-center py-2">
                   <FaHandPointRight className="min-w-[16px] text-orange-400" />
-                  PostgreSQL{' '}
+                  PostgreSQL{" "}
                 </li>
               </div>
             </ul>
@@ -259,7 +266,7 @@ function App() {
             <Project
               key={index}
               project={project}
-              type={'Featured Projects'}
+              type={"Featured Projects"}
               index={index}
               pics={pics[index]}
             />
