@@ -21,8 +21,6 @@ import weather3 from "./assets/weather3.webp";
 import moviex from "./assets/moviex1.avif";
 import moviex2 from "./assets/moviex2.avif";
 import TypingText from "./components/typingText";
-import budget from "./assets/budget.webp";
-import budget2 from "./assets/budget2.avif";
 import Contact from "./components/contact";
 import figsy1 from "./assets/figsy-mockup1.webp";
 import figsy2 from "./assets/figsy-mockup2.webp";
@@ -30,6 +28,10 @@ import figsy3 from "./assets/figsy-mockup3.webp";
 import figsy4 from "./assets/figsy-mockup4.webp";
 import figsy5 from "./assets/figsy-mockup5.webp";
 import figsy6 from "./assets/figsy-mockup6.webp";
+import elegami1 from "./assets/elegami-mockup1.avif";
+import elegami2 from "./assets/elegami-mockup2.avif";
+import elegami3 from "./assets/elegami-mockup3.avif";
+import elegami4 from "./assets/elegami-mockup4.avif";
 
 function App() {
   const [text, setText] = useState(0);
@@ -47,10 +49,10 @@ function App() {
   };
 
   const pics = [
+    [elegami1, elegami2, elegami3, elegami4],
     [figsy1, figsy2, figsy3, figsy4, figsy5, figsy6],
     [booking, booking2, booking3, booking4],
     [weather, weather2, weather3],
-    [budget, budget2],
     [moviex, moviex2],
   ];
 
@@ -128,7 +130,7 @@ function App() {
             </li>
             <li className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200">
               <a
-                href="https://drive.google.com/file/d/1k1R7tif7OKuGZCkqmp2_jW-H6TJKnyEX/view?usp=sharing"
+                href="https://drive.google.com/file/d/1nHXeQlA5MT3NYb_EdMSByOKToOrXpBNO/view?usp=sharing"
                 className="border border-orange-400 text-white px-4 py-2 ml-5 rounded-md hover:-translate-x-2 hover:-translate-y-1 duration-300 hover:shadow-btnShadow"
                 target="_blank"
                 rel="noopener noreferrer"

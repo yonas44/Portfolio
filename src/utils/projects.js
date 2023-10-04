@@ -1,5 +1,15 @@
 export const featuredProjects = [
   {
+    title: "Elegami",
+    description:
+      "A dynamic project management solution designed to enhance collaboration and efficiency. With intuitive task management, visual project planning, and real-time updates. Test the app using; Email: user1@example.com, Password: password",
+    stack: ["Hotwire-rails", "Hotwire-stimulus", "Ruby on Rails", "PostgreSQL"],
+    link: [
+      "https://github.com/yonas44/Elegami",
+      "https://elegami.onrender.com/",
+    ],
+  },
+  {
     title: "Figsy",
     description:
       "Software platform currently in its developmental stage, with a focused mission to provide a convenient way for a client to connect with health/ nutrition professionals and enhance the monitoring of user's nutritional intake and consumption patterns. Upon completion, this platform will empower users to establish direct connections with their assigned nutritionists to get tailored guidance.",
@@ -30,16 +40,16 @@ export const featuredProjects = [
       "https://my-weather-app-q80f.onrender.com/",
     ],
   },
-  {
-    title: "Budget App",
-    description:
-      "This budget-tracking app enables users to monitor their spending by categorizing transactions. With the ability to customize categories, users can easily track expenses and stay on top of their finances.",
-    stack: ["Ruby", "Rails", "PostgreSQL", "Devise"],
-    link: [
-      "https://github.com/yonas44/Budget-app",
-      "https://budget-app-385w.onrender.com/",
-    ],
-  },
+  // {
+  //   title: "Budget App",
+  //   description:
+  //     "This budget-tracking app enables users to monitor their spending by categorizing transactions. With the ability to customize categories, users can easily track expenses and stay on top of their finances.",
+  //   stack: ["Ruby", "Rails", "PostgreSQL", "Devise"],
+  //   link: [
+  //     "https://github.com/yonas44/Budget-app",
+  //     "https://budget-app-385w.onrender.com/",
+  //   ],
+  // },
   {
     title: "MovieX",
     description:
