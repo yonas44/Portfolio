@@ -130,7 +130,7 @@ function App() {
             </li>
             <li className="nav-links opacity-0 flex gap-3 items-center cursor-pointer hover:text-orange-200 duration-200">
               <a
-                href="https://drive.google.com/file/d/1nHXeQlA5MT3NYb_EdMSByOKToOrXpBNO/view?usp=sharing"
+                href="https://drive.google.com/file/d/1k6jaiBrGEetlfeD5HiziagAoTJDbhyzH/view?usp=sharing"
                 className="border border-orange-400 text-white px-4 py-2 ml-5 rounded-md hover:-translate-x-2 hover:-translate-y-1 duration-300 hover:shadow-btnShadow"
                 target="_blank"
                 rel="noopener noreferrer"
