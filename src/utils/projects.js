@@ -21,7 +21,7 @@ export const featuredProjects = [
       "PostgreSQL",
       "WebSocket",
     ],
-    link: ["", "https://figsy.online"],
+    link: ["", "https://figsy.vercel.app/"],
   },
   {
     title: "Travelers Hub",
