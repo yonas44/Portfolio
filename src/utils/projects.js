@@ -1,5 +1,11 @@
 export const featuredProjects = [
   {
+    title: "Icon Rewards",
+    description:
+      "A custom loyalty system that aims to enable companies to track customer interactions and branch performance,offering detailed analytics to address business needs and enhance retention.",
+    stack: ["ReactJS", "Ruby on Rails", "Firebase(OTP)", "PostgreSQL"],
+  },
+  {
     title: "Elegami",
     description:
       "A dynamic project management solution designed to enhance collaboration and efficiency. With intuitive task management, visual project planning, and real-time updates. Test the app using; Email: user1@example.com, Password: password",
@@ -50,16 +56,16 @@ export const featuredProjects = [
   //     "https://budget-app-385w.onrender.com/",
   //   ],
   // },
-  {
-    title: "MovieX",
-    description:
-      "This is a movie application that lets users choose between different movies to watch based on the number of likes and comments. They can also leave their likes and comments.",
-    stack: ["JavaScript", "Webpack", "CSS3", "HTML5"],
-    link: [
-      "https://github.com/Abdessittir/JavaScript-capstone",
-      "https://abdessittir.github.io/JavaScript-capstone/dist/",
-    ],
-  },
+  // {
+  //   title: "MovieX",
+  //   description:
+  //     "This is a movie application that lets users choose between different movies to watch based on the number of likes and comments. They can also leave their likes and comments.",
+  //   stack: ["JavaScript", "Webpack", "CSS3", "HTML5"],
+  //   link: [
+  //     "https://github.com/Abdessittir/JavaScript-capstone",
+  //     "https://abdessittir.github.io/JavaScript-capstone/dist/",
+  //   ],
+  // },
 ];
 
 export const otherProjects = [

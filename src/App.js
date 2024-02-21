@@ -18,8 +18,6 @@ import booking4 from "./assets/booking4.webp";
 import weather from "./assets/weather.webp";
 import weather2 from "./assets/weather2.webp";
 import weather3 from "./assets/weather3.webp";
-import moviex from "./assets/moviex1.avif";
-import moviex2 from "./assets/moviex2.avif";
 import TypingText from "./components/typingText";
 import Contact from "./components/contact";
 import figsy1 from "./assets/figsy-mockup1.webp";
@@ -32,6 +30,10 @@ import elegami1 from "./assets/elegami-mockup1.avif";
 import elegami2 from "./assets/elegami-mockup2.avif";
 import elegami3 from "./assets/elegami-mockup3.avif";
 import elegami4 from "./assets/elegami-mockup4.avif";
+import loyalty1 from "./assets/loyalty-mockup1.png";
+import loyalty2 from "./assets/loyalty-mockup2.png";
+import loyalty3 from "./assets/loyalty-mockup3.png";
+import loyalty4 from "./assets/loyalty-mockup4.png";
 
 function App() {
   const [text, setText] = useState(0);
@@ -49,11 +51,11 @@ function App() {
   };
 
   const pics = [
+    [loyalty1, loyalty2, loyalty3, loyalty4],
     [elegami1, elegami2, elegami3, elegami4],
     [figsy1, figsy2, figsy3, figsy4, figsy5, figsy6],
     [booking, booking2, booking3, booking4],
     [weather, weather2, weather3],
-    [moviex, moviex2],
   ];
 
   useEffect(() => {

@@ -26,5 +26,6 @@
 
 body {
   color: rgb(214, 219, 220);
+  scroll-behavior: smooth;
   background: #01060ae8;
 }
