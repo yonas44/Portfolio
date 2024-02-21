@@ -1,9 +1,13 @@
 export const featuredProjects = [
   {
-    title: "Icon Rewards",
+    title: "Quickchops",
     description:
       "A custom loyalty system that aims to enable companies to track customer interactions and branch performance,offering detailed analytics to address business needs and enhance retention.",
     stack: ["ReactJS", "Ruby on Rails", "Firebase(OTP)", "PostgreSQL"],
+    link: [
+      "",
+      "https://quickchops.vercel.app/",
+    ],
   },
   {
     title: "Elegami",
